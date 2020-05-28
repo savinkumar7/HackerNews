@@ -2,14 +2,14 @@ import express from "express";
 import path from "path";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
-import StoryBoardRoute from "./public/components/StoryBoardRoute";
+import Hackerboard from "./public/components/HackerBoard";
 
 const app = express();
 
 app.use("/static", express.static(path.resolve(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  const componentStream = ReactDOMServer.renderToString(<StoryBoardRoute />);
+  const componentStream = ReactDOMServer.renderToString(<Hackerboard />);
 
   const html = `
     <!doctype html>

@@ -1,5 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import StoryBoardRoute from "./components/StoryBoardRoute";
+import Hackerboard from "./components/HackerBoard";
 
-ReactDOM.hydrate(<StoryBoardRoute />, document.getElementById("root"));
+ReactDOM.hydrate(<Hackerboard />, document.getElementById("root"));
