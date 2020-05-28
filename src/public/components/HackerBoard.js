@@ -62,7 +62,7 @@ class StoryBoard extends React.Component {
           this.setState((prevState, currentProps) => {
             return {
               stories: [...hits],
-              currentPage: prevState.currentPage + 1,
+              currentPage: prevState.currentPage - 1,
             };
           })
         )
