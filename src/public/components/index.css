@@ -47,14 +47,16 @@ span i,
   cursor: pointer;
 }
 
-.more-stories {
+.paging {
   margin: 20px 5%;
   color: orange;
   cursor: pointer;
+  text-align: right;
 }
 
 .upvote-button {
   color: #ccccccab;
+  cursor: pointer;
 }
 
 .story-title,
@@ -119,5 +121,8 @@ span i,
   }
   .width {
     width: -webkit-fill-available;
+  }
+  .margin {
+    margin: 10px;
   }
 }

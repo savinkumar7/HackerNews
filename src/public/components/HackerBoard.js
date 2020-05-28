@@ -106,14 +106,21 @@ class StoryBoard extends React.Component {
               ))}
           </tbody>
         </table>
-        {this.state.stories.length > 0 ? (
-          <div className="more-stories">
-            <span onClick={() => this.fetchPreviousResults()}>
+        {this.state.currentPage > 0 ? (
+          <div className="paging">
+            <span
+              style={{ margin: "20px" }}
+              onClick={() => this.fetchPreviousResults()}
+            >
               Previous page
             </span>
             <span onClick={() => this.fetchNextResults()}>Next page</span>
           </div>
-        ) : null}
+        ) : (
+          <div className="paging">
+            <span onClick={() => this.fetchNextResults()}>Next page</span>
+          </div>
+        )}
       </div>
     );
   }
