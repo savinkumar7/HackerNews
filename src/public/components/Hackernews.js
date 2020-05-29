@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
+import "react-super-responsive-table/dist/SuperResponsiveTable";
 import "./index.css";
 
 const Hackernews = (props) => {
@@ -31,18 +33,18 @@ const Hackernews = (props) => {
   };
 
   return (
-    <tr className="story-row">
-      <td>{totalComments}</td>
-      <td>{totalLikes}</td>
-      <td>
+    <Tr className="story-row">
+      <Td>{totalComments}</Td>
+      <Td>{totalLikes}</Td>
+      <Td>
         <span
           className="upvote-button"
           onClick={() => upvote(objectID, totalLikes)}
         >
           <i className="fas fa-caret-up"></i>
         </span>
-      </td>
-      <td>
+      </Td>
+      <Td>
         <div className="sm-2">
           <span className="story-title">{title}</span>
           <span className="domain-name">({domainName})</span>
@@ -56,8 +58,8 @@ const Hackernews = (props) => {
             </span>
           </div>
         </div>
-      </td>
-    </tr>
+      </Td>
+    </Tr>
   );
 };
 

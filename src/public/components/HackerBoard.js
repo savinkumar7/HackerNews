@@ -1,5 +1,8 @@
 import React from "react";
 import Hackernews from "./Hackernews";
+import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
+// import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
+import "./index.css";
 
 class StoryBoard extends React.Component {
   constructor(props) {
@@ -83,19 +86,19 @@ class StoryBoard extends React.Component {
   render() {
     return (
       <div className="story-board-container">
-        <table
+        <Table
           style={{ width: "-webkit-fill-available" }}
           className="stories-container width"
         >
-          <thead className="story-board-header">
-            <tr key="head">
-              <th>Comments</th>
-              <th>Vote counts</th>
-              <th>UpVote</th>
-              <th>Name Details</th>
-            </tr>
-          </thead>
-          <tbody>
+          <Thead className="story-board-header">
+            <Tr key="head">
+              <Th>Comments</Th>
+              <Th>Vote counts</Th>
+              <Th>UpVote</Th>
+              <Th>Name Details</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
             {this.state.stories &&
               this.state.stories.map((story, index) => (
                 <Hackernews
@@ -104,8 +107,8 @@ class StoryBoard extends React.Component {
                   hideStory={() => this.hideStory(story.objectID)}
                 />
               ))}
-          </tbody>
-        </table>
+          </Tbody>
+        </Table>
         {this.state.currentPage > 0 ? (
           <div className="paging">
             <span
